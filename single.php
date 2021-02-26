@@ -22,8 +22,18 @@
     </div>
 
     <div class="w3-row">
-    <div class="w3-container w3-col l1"></div>
-    <div class="w3-container w3-col l11"><?php the_content(); ?></div>
+    <div class="w3-container w3-col l1">
+      <div class="w3-padding w3-xlarge w3-text-theme">
+        <p><i class="fa fa-facebook"></i></p>
+        <p><i class="fa fa-instagram"></i></p>
+        <p><i class="fa fa-twitter"></i></p>
+        <p><i class="fa fa-pinterest"></i></p>
+        <p><i class="fa fa-linkedin"></i></p>
+        <p><i class="fa fa-whatsapp"></i></p>
+        <p><i class="fa fa-envelope"></i></p>
+      </div>
+    </div>
+    <div class="w3-container w3-col l11 w3-text-large"><?php the_content(); ?></div>
     </div>
 
 <?php get_footer(); ?>
