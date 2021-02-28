@@ -13,10 +13,10 @@
       </div>
 
       <div class="w3-container">
-        <?php the_content(); ?>
+        <?php the_excerpt(); ?>
         <div class="w3-row">
           <div class="w3-col m8 s12">
-            <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+            <p><a href="<?php echo get_permalink() ?>"><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></a></p>
           </div>
           <div class="w3-col m4 w3-hide-small">
             <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>

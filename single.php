@@ -33,7 +33,28 @@
         <p><i class="fa fa-envelope"></i></p>
       </div>
     </div>
-    <div class="w3-container w3-col l11 w3-text-large"><?php the_content(); ?></div>
+    <div class="w3-container w3-col l9 w3-large"><?php the_content(); ?></div>
+    <div class="w3-container w3-col l2">
+
+      <div class="w3-card w3-margin w3-margin-top">
+          <img src="https://www.w3schools.com//w3images/avatar_g.jpg" style="width:100%">
+          <div class="w3-container w3-white">
+              <h4><b>My Name</b></h4>
+              <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+          </div>
+      </div>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- Post Sidebar Ad Unit -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-6711992340157945"
+          data-ad-slot="3499478269"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
     </div>
 
 <?php get_footer(); ?>
