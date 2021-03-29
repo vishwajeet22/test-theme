@@ -19,7 +19,17 @@ function minimalistblogger_widgets_init() {
 	);
 }
 
+function register_my_menus() {
+	
+	register_nav_menus(
+	  array('primary-menu' => __( 'Primary Menu' ))
+	);
+}
+
+add_action( 'init', 'register_my_menus' );
+
 add_action( 'widgets_init', 'minimalistblogger_widgets_init' );
 
 add_theme_support( 'post-thumbnails' );
+
 ?>
