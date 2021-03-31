@@ -19,14 +19,12 @@
         ));
         foreach( $recent_posts as $post_item ) : ?>
             <li class="w3-padding-16">
-            <img class="w3-left w3-margin-right" style="width:50px" src="<?php echo get_the_post_thumbnail_url($post_item['ID'], 'full'); ?>">
-            <i class="fa fa-sticky-note w3-theme" aria-hidden="true"></i>
-                <a href="<?php echo get_permalink($post_item['ID']) ?>">
-                    <p class=""><?php echo $post_item['post_title'] ?></p>
+                <a href="<?php echo get_permalink($post_item['ID']) ?>" class="w3-button">
+                    <div class="w3-large"><i class="fa fa-pencil w3-text-theme w3-margin-right"></i>
+                    <?php echo $post_item['post_title'] ?></div>
                 </a>
             </li>
         <?php endforeach; ?>
     </ul>
 
 </div><hr>
-

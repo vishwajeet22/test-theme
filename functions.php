@@ -32,4 +32,8 @@ add_action( 'widgets_init', 'minimalistblogger_widgets_init' );
 
 add_theme_support( 'post-thumbnails' );
 
+function get_post_header_image() {
+	return the_post_thumbnail_url();	
+}
+
 ?>
