@@ -35,6 +35,7 @@
       </div>
     </div>
     <div class="w3-container w3-justify w3-col l9 m12 s12 w3-large"><?php the_content(); ?></div>
+
     <div class="w3-container w3-col l2 m12 s12">
 
       <div class="w3-card w3-margin w3-margin-top">
@@ -44,18 +45,17 @@
               <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
           </div>
       </div>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <!-- Post Sidebar Ad Unit -->
-      <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-6711992340157945"
-          data-ad-slot="3499478269"
-          data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
-      <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
     </div>
+    <!-- End of row -->
+    </div>
+
+    <div class="w3-container">
+    <?php
+    // If comments are open or we have at least one comment, load up the comment template.  
+      if ( comments_open() || get_comments_number() ) :
+          comments_template();
+      endif;
+    ?>
     </div>
 
 <?php get_footer(); ?>
