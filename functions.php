@@ -44,12 +44,12 @@ function mytheme_comment($comment, $args, $depth) {
         $tag       = 'li';
         $add_below = 'div-comment';
     }?>
-    <<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent w3-row' ); ?> id="comment-<?php comment_ID() ?>"><?php 
+    <<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? 'w3-row w3-border w3-border-theme' : 'parent w3-row  w3-border-theme' ); ?> id="comment-<?php comment_ID() ?>"><?php 
     if ( 'div' != $args['style'] ) { ?>
         <div id="div-comment-<?php comment_ID() ?>" class="comment-body w3-container w3-row"><?php
     } ?>
 
-		<div class="w3-col w3-container l4 m5 s12 w3-padding">
+		<div class="w3-col w3-container l3 m3 w3-hide-small w3-padding">
 			<div class="comment-author vcard"><?php 
 				if ( $args['avatar_size'] != 0 ) {
 					if ($comment->comment_parent == '0')
@@ -58,9 +58,21 @@ function mytheme_comment($comment, $args, $depth) {
 						echo get_avatar( $comment, 48,'', '', array('class' => 'w3-margin-left w3-left w3-circle w3-margin-right')); 	
 				} ?>
 			</div>
+		</div>
 
-			<div class="comment-meta commentmetadata w3-margin-top">
+		<div class="w3-col w3-container w3-hide-medium w3-hide-large s3 w3-padding">
+			<div class="comment-author vcard"><?php 
+				if ( $args['avatar_size'] != 0 ) {
+					if ($comment->comment_parent == '0')
+						echo get_avatar( $comment, 48,'', '', array('class' => 'w3-left w3-circle w3-margin-right')); 
+					else
+						echo get_avatar( $comment, 24,'', '', array('class' => 'w3-margin-left w3-left w3-circle w3-margin-right')); 	
+				} ?>
+			</div>
+		</div>
 
+		<div class="w3-col l9 m9 s9 w3-container w3-justify">
+			<div class="comment-meta commentmetadata">
 				<?php printf( __( '<cite class="fn w3-text-theme">%s</cite>' ), get_comment_author() ); ?>
 				<br/>
 				<span class="w3-small"><?php
@@ -79,9 +91,6 @@ function mytheme_comment($comment, $args, $depth) {
 					edit_comment_link( __( '(Edit)' ), '  ', '' ); 
 				?>
 			</div>
-		</div>
-
-		<div class="w3-col l8 m7 s12 w3-container w3-padding ">
 			<?php comment_text(); ?>
 			<div class="reply w3-button w3-padding-large w3-white w3-border"><?php 
                 comment_reply_link( 
