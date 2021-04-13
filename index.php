@@ -3,7 +3,7 @@
 <div class="w3-row">
 <!-- Blog entries -->
   <div class="w3-col l8 s12">
-  <?php while (have_posts()): the_post(); ?>
+    <?php while (have_posts()): the_post(); ?>
     <!-- Blog entry -->
     <div class="w3-card-4 w3-margin w3-white">
       <img src="<?php the_post_thumbnail_url(); ?>" alt="Nature" style="width:100%;">
@@ -25,7 +25,13 @@
       </div>
     </div>
 
-  <?php endwhile;  ?>
+    <?php endwhile;  ?>
+
+    <div class="w3-margin">
+      <?php next_posts_link( '<div class="w3-button w3-padding-large w3-white w3-border w3-right"><b>NEXT »</b></div>' ); ?>
+      <?php previous_posts_link( '<div class="w3-button w3-padding-large w3-white w3-border w3-left"><b>« PREVIOUS </b></div>' ); ?>
+    </div>
+
   </div>
 
   <div class="w3-col l4" >
