@@ -34,9 +34,9 @@
 
 <!-- Top menu on small screens -->
 <header>
-<div id="miniHeader" class="w3-container w3-mobile w3-top w3-hide-large w3-hide-medium w3-theme w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-theme w3-margin-right" onclick="w3_open()">☰</a>
-  <span><?php bloginfo( 'name' ); ?></span>
+<div id="miniHeader" class="w3-bar w3-mobile w3-top w3-hide-large w3-hide-medium w3-theme w3-xlarge">
+  <h3><a href="javascript:void(0)" class="w3-button w3-theme w3-margin-right" onclick="w3_open()">☰</a>
+  <span><?php bloginfo( 'name' ); ?></span></h3>
 </div>  
 
 <div id="paddingToAvoidHeaderOverlap" class="w3-container w3-hide-large w3-hide-medium w3-padding-32"></div>
