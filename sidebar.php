@@ -19,8 +19,8 @@
         ));
         foreach( $recent_posts as $post_item ) : ?>
             <li class="w3-padding-16">
-                <a href="<?php echo get_permalink($post_item['ID']) ?>" class="w3-button">
-                    <div class="w3-large"><i class="fa fa-pencil w3-text-theme w3-margin-right"></i>
+                <a href="<?php echo get_permalink($post_item['ID']) ?>" class="w3-button w3-block">
+                    <div class="w3-large w3-left"><i class="fa fa-pencil w3-text-theme w3-margin-right"></i>
                     <?php echo $post_item['post_title'] ?></div>
                 </a>
             </li>
