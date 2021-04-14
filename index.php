@@ -28,8 +28,8 @@
     <?php endwhile;  ?>
 
     <div class="w3-margin">
-      <?php next_posts_link( '<div class="w3-button w3-padding-large w3-white w3-border w3-right"><b>NEXT »</b></div>' ); ?>
-      <?php previous_posts_link( '<div class="w3-button w3-padding-large w3-white w3-border w3-left"><b>« PREVIOUS </b></div>' ); ?>
+      <?php next_posts_link( '<div class="w3-btn w3-padding-large w3-white w3-border w3-right"><b>NEXT »</b></div>' ); ?>
+      <?php previous_posts_link( '<div class="w3-btn w3-padding-large w3-white w3-border w3-left"><b>« PREVIOUS </b></div>' ); ?>
     </div>
 
   </div>

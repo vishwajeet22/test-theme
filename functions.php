@@ -92,18 +92,19 @@ function mytheme_comment($comment, $args, $depth) {
 				?>
 			</div>
 			<?php comment_text(); ?>
-			<div class="reply w3-button w3-padding-large w3-white w3-border"><?php 
+			<?php 
                 comment_reply_link( 
                     array_merge( 
                         $args, 
                         array( 
+							'reply_text'=> '<div class="w3-button w3-padding w3-white w3-border"><b>Reply</b></div>',
                             'add_below' => $add_below, 
                             'depth'     => $depth, 
                             'max_depth' => $args['max_depth'] 
                         ) 
                     ) 
-                ); ?>
-        	</div>
+                ); 
+			?>
 		</div>
  
     <?php 
