@@ -11,6 +11,7 @@ $comment_body = 'Comment';
 $comment_url = 'Website';
 $comment_cookies_1 = ' By commenting you accept the';
 $comment_cookies_2 = ' Privacy Policy';
+$comment_cookies = ' Save my name, email, and website in <b>this browser</b> for the next time I comment.';
  
 $comment_before = 'Registration isn\'t required.';
  
@@ -21,13 +22,13 @@ $comments_args = array(
     //Define Fields
     'fields' => array(
         //Author field
-        'author' => '<label class="w3-text-theme">Author</label><input id="author" name="author" class="w3-input w3-border" aria-required="true" placeholder="' . $comment_author .'"></input>',
+        'author' => '<label class="w3-text-theme">Author <span class="w3-text-red">*</span></label><input id="author" name="author" class="w3-input w3-border" aria-required="true" placeholder="' . $comment_author .'" required></input>',
         //Email Field
-        'email' => '<label class="w3-text-theme">E-Mail</label><input id="email" name="email" class="w3-input w3-border" placeholder="' . $comment_email .'"></input>',
+        'email' => '<label class="w3-text-theme">E-Mail <span class="w3-text-red">*</span></label><input id="email" name="email" class="w3-input w3-border" placeholder="' . $comment_email .'" required></input>',
         //URL Field
         //'url' => '<p class="comment-form-url"><br /><input id="url" name="url" placeholder="' . $comment_url .'"></input></p>',
         //Cookies
-        'cookies' => '<input class="w3-check" type="checkbox" required>' . $comment_cookies_1 . '<a href="' . get_privacy_policy_url() . '">' . $comment_cookies_2 . '</a>',
+        'cookies' => '<div class="w3-text-khaki w3-justify"><input class="w3-check" type="checkbox">' . $comment_cookies . '</div>',
     ),
     // Change the title of send button
     'label_submit' => __( $comment_send ),
@@ -35,17 +36,21 @@ $comments_args = array(
     'title_reply' => __( $comment_reply ),
     // Change the title of the reply section
     'title_reply_to' => __( $comment_reply_to ),
-    //Cancel Reply Text
+    // Comment box Header
+    'title_reply_before' => '<div class="w3-panel w3-padding w3-theme-l2"><h3 id="reply-title" class="comment-reply-title">',
+    'title_reply_after' => '</h3></div>',
+    // Cancel Reply Text
     'cancel_reply_link' => __( $comment_cancel ),
+    // Cancel reply button HTML
+    'cancel_reply_before' => '<span class="w3-small w3-right">',
+    'cancel_reply_after' => '</span>',
     // Redefine your own textarea (the comment body).
     'comment_field' => '<label class="comment-form-comment w3-text-theme">Comment</label><textarea id="comment" name="comment" class="w3-input w3-border" aria-required="true" placeholder="' . $comment_body .'" style="resize: none"></textarea>',
-    //Message Before Comment
-    'comment_notes_before' => __( $comment_before),
-    // Remove "Text or HTML to be displayed after the set of comment fields".
     'comment_notes_after' => '',
+    'class_form' => 'w3-container',
     //Submit Button ID
     'id_submit' => __( 'comment-submit' ),
-    'class_submit' => 'w3-button w3-theme w3-padding'
+    'class_submit' => 'w3-btn w3-padding-large w3-white w3-border'
 );
 
 ?>
@@ -83,7 +88,7 @@ $comments_args = array(
     <?php endif; // have_comments() ?>
 
     <div class="w3-col s12 m12 l6">
-        <div class="w3-card w3-padding">
+        <div class="w3-card">
             <?php comment_form($comments_args); ?>
         </div>
     </div>
