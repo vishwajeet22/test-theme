@@ -44,7 +44,7 @@ function mytheme_comment($comment, $args, $depth) {
         $tag       = 'li';
         $add_below = 'div-comment';
     }?>
-    <<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? 'w3-row w3-border w3-border-theme' : 'parent w3-row  w3-border-theme' ); ?> id="comment-<?php comment_ID() ?>"><?php 
+    <<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? 'w3-row w3-panel' : 'parent w3-row w3-panel' ); ?> id="comment-<?php comment_ID() ?>"><?php 
     if ( 'div' != $args['style'] ) { ?>
         <div id="div-comment-<?php comment_ID() ?>" class="comment-body w3-container w3-row"><?php
     } ?>
@@ -112,5 +112,14 @@ function mytheme_comment($comment, $args, $depth) {
         </div><?php 
     endif;
 }
+
+function wpb_move_comment_field_to_bottom( $fields ) {
+	$comment_field = $fields['comment'];
+	unset( $fields['comment'] );
+	$fields['comment'] = $comment_field;
+	return $fields;
+}
+
+add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom');
 
 ?>

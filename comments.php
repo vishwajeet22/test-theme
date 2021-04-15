@@ -22,13 +22,13 @@ $comments_args = array(
     //Define Fields
     'fields' => array(
         //Author field
-        'author' => '<label class="w3-text-theme">Author <span class="w3-text-red">*</span></label><input id="author" name="author" class="w3-input w3-border" aria-required="true" placeholder="' . $comment_author .'" required></input>',
+        'author' => '<label class="w3-text-theme">Author <span class="w3-text-red">*</span></label><input id="author" name="author" class="w3-input w3-border w3-margin-bottom" aria-required="true" placeholder="' . $comment_author .'" required></input>',
         //Email Field
-        'email' => '<label class="w3-text-theme">E-Mail <span class="w3-text-red">*</span></label><input id="email" name="email" class="w3-input w3-border" placeholder="' . $comment_email .'" required></input>',
+        'email' => '<label class="w3-text-theme">E-Mail <span class="w3-text-red">*</span></label><input id="email" name="email" class="w3-input w3-border w3-margin-bottom" placeholder="' . $comment_email .'" required></input>',
         //URL Field
         //'url' => '<p class="comment-form-url"><br /><input id="url" name="url" placeholder="' . $comment_url .'"></input></p>',
         //Cookies
-        'cookies' => '<div class="w3-text-khaki w3-justify"><input class="w3-check" type="checkbox">' . $comment_cookies . '</div>',
+        'cookies' => '<div class="w3-text-khaki w3-justify w3-margin-bottom"><input class="w3-check" type="checkbox">' . $comment_cookies . '</div>',
     ),
     // Change the title of send button
     'label_submit' => __( $comment_send ),
@@ -45,7 +45,7 @@ $comments_args = array(
     'cancel_reply_before' => '<span class="w3-small w3-right">',
     'cancel_reply_after' => '</span>',
     // Redefine your own textarea (the comment body).
-    'comment_field' => '<label class="comment-form-comment w3-text-theme">Comment</label><textarea id="comment" name="comment" class="w3-input w3-border" aria-required="true" placeholder="' . $comment_body .'" style="resize: none"></textarea>',
+    'comment_field' => '<label class="comment-form-comment w3-text-theme">Comment</label><textarea id="comment" name="comment" class="w3-input w3-border w3-margin-bottom" aria-required="true" placeholder="' . $comment_body .'" style="resize: none"></textarea>',
     'comment_notes_after' => '',
     'class_form' => 'w3-container',
     //Submit Button ID
