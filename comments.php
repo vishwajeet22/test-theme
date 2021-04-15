@@ -11,7 +11,7 @@ $comment_body = 'Comment';
 $comment_url = 'Website';
 $comment_cookies_1 = ' By commenting you accept the';
 $comment_cookies_2 = ' Privacy Policy';
-$comment_cookies = ' Save my name, email, and website in <b>this browser</b> for the next time I comment.';
+$comment_cookies = ' Save my name and email in <b>this browser</b> for the next time I comment.';
  
 $comment_before = 'Registration isn\'t required.';
  
