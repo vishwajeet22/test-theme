@@ -1,5 +1,5 @@
 <div class="w3-card w3-margin w3-margin-top">
-    <img src="https://www.w3schools.com//w3images/avatar_g.jpg" style="width:100%">
+    <img src="<?php bloginfo('template_url'); ?>/res/coming-soon.jpg" style="width:100%">
     <div class="w3-container w3-white">
         <h4><b>My Name</b></h4>
         <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
@@ -24,6 +24,30 @@
                     <i class="fa fa-pencil w3-text-theme w3-margin-right"></i>
                     <?php $title_len = strlen($post_item['post_title']); ?>
                     <span class="<?php echo ($title_len >=40 ? "w3-small" : ""); ?>"><?php echo $post_item['post_title'] ?></span>
+                </div>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+
+</div><hr>
+
+<!-- Categories -->
+<div class="w3-card w3-margin w3-margin-top">
+    <div class="w3-container w3-padding w3-theme-l2">
+      <h4>Browse Categories</h4>
+    </div>
+    <ul id="browse_categories" class="w3-ul w3-hoverable w3-white">
+        <?php
+        $categories = get_categories( array(
+            'orderby' => 'name',
+            'order'   => 'ASC'
+        ) );
+        foreach( $categories as $category ) : ?>
+            <li class="w3-padding-16">
+                <a href="<?php echo get_category_link( $category->term_id ); ?>" class="w3-button w3-block">
+                <div class="w3-large w3-left">
+                    <?php echo $category->name ?>
                 </div>
                 </a>
             </li>
