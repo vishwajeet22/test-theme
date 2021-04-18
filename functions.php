@@ -44,14 +44,8 @@ function mytheme_comment($comment, $args, $depth) {
     <<?php echo $tag; ?> <?php comment_class(''); ?> id="comment-<?php comment_ID() ?>">
 
 		<div class="w3-col w3-panel s3 m3 l3" id="comment-avatar-<?php comment_ID() ?>">
-			<div class="comment-author vcard"><?php 
-				/*if ( $args['avatar_size'] != 0 ) {
-					/if ($comment->comment_parent == '0')
-						echo get_avatar( $comment, 48,'', '', array('class' => 'w3-left w3-circle w3-margin-right')); 
-					else
-						echo get_avatar( $comment, 24,'', '', array('class' => 'w3-margin-left w3-left w3-circle w3-margin-right')); 	
-				}*/ ?>
-				<img src="<?php echo get_template_directory_uri(); ?>/res/gravtar.jpg" alt="default_gravtar" class="w3-right w3-circle w3-margin-right" style="width:25%">
+			<div class="comment-author vcard">
+				<img src="<?php echo get_template_directory_uri(); ?>/res/gravtar.jpg" alt="default_gravtar" loading="lazy" class="w3-right w3-circle w3-margin-right" style="width:50px">
 			</div>
 		</div>
 

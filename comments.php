@@ -45,7 +45,7 @@ $comments_args = array(
     'cancel_reply_before' => '<span class="w3-small w3-right">',
     'cancel_reply_after' => '</span>',
     // Redefine your own textarea (the comment body).
-    'comment_field' => '<label class="comment-form-comment w3-text-theme">Comment</label><textarea id="comment" name="comment" class="w3-input w3-border w3-margin-bottom" aria-required="true" placeholder="' . $comment_body .'" style="resize: none"></textarea>',
+    'comment_field' => '<label class="comment-form-comment w3-text-theme">Comment</label><textarea id="comment" name="comment" class="w3-input w3-border w3-margin-bottom" aria-required="true" placeholder="' . $comment_body .'" style="resize: none; height: 10em"></textarea>',
     'comment_notes_after' => '',
     'class_form' => 'w3-container',
     //Submit Button ID
@@ -65,6 +65,7 @@ $comments_args = array(
             <div class="commentlist w3-row">
                 <?php wp_list_comments( 'type=comment&callback=mytheme_comment&style=div' ); ?>
             </div>
+            <hr/>
             <!-- .comment-list -->
         </div>
  
@@ -72,10 +73,10 @@ $comments_args = array(
             // Are there comments to navigate through?
             if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
         ?>
-        <hr/>
+
         <nav class="comment-navigation w3-section w3-center" role="navigation">
-            <?php previous_comments_link( '<div class="w3-btn w3-padding-large w3-white w3-border w3-tooltip"><b>« <span class="w3-text">Older Comments</span></b></div>' ); ?>
-            <?php next_comments_link( '<div class="w3-btn w3-padding-large w3-white w3-border w3-tooltip"><b><span class="w3-text">Newer Comments</span> »</b></div>' ); ?>
+            <?php previous_comments_link( '<div class="w3-btn w3-padding-large w3-white w3-border w3-tooltip"><b>« <span class="w3-text w3-animate-right">Older Comments</span></b></div>' ); ?>
+            <?php next_comments_link( '<div class="w3-btn w3-padding-large w3-white w3-border w3-tooltip"><b><span class="w3-text w3-animate-left">Newer Comments</span> »</b></div>' ); ?>
         </nav><!-- .comment-navigation -->
         <?php endif; // Check for comment navigation ?>
  
