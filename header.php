@@ -17,7 +17,7 @@
 <nav class="w3-sidebar w3-bar-block w3-theme w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;display: none" id="mySidebar"><br>
 
   <div class="w3-container">
-    <h3 class="w3-padding-64"><b><?php bloginfo( 'name' ); ?></b></h3>
+    <h3 class="w3-padding-64 w3-center"><b><?php bloginfo( 'name' ); ?></b></h3>
   </div>
   <div class="w3-bar-block">
 
@@ -35,15 +35,15 @@
 <!-- Top menu on small screens -->
 <header>
 <div id="miniHeader" class="w3-bar w3-mobile w3-top w3-hide-large w3-hide-medium w3-theme w3-xlarge">
-  <h3><a href="javascript:void(0)" class="w3-button w3-theme w3-margin-right" onclick="w3_open()">☰</a>
-  <span><?php bloginfo( 'name' ); ?></span></h3>
+  <h3><a href="javascript:void(0)" class="w3-button w3-theme w3-hover-theme" onclick="w3_open()">☰</a>
+  <a href="<?php echo get_home_url(); ?>" class="w3-button w3-theme w3-hover-theme"><span><?php bloginfo( 'name' ); ?></span></a></h3>
 </div>  
 
 <div id="paddingToAvoidHeaderOverlap" class="w3-container w3-hide-large w3-hide-medium w3-padding-32"></div>
 
 <div class="w3-hide-small">
   <div class="w3-container w3-center w3-padding-32">
-    <h1><b><?php bloginfo( 'name' ); ?></b></h1>
+    <h1><b><a href="<?php echo get_home_url(); ?>" class="w3-button w3-white w3-hover-white"><?php bloginfo( 'name' ); ?></a></b></h1>
     <p><?php echo html_entity_decode(get_bloginfo( 'description' )); ?></p>
   </div>
 
