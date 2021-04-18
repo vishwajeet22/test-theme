@@ -72,10 +72,10 @@ $comments_args = array(
             // Are there comments to navigate through?
             if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
         ?>
-        <nav class="navigation comment-navigation" role="navigation">
-            <h1 class="screen-reader-text section-heading"><?php _e( 'Comment navigation', 'twentythirteen' ); ?></h1>
-            <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'twentythirteen' ) ); ?></div>
-            <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'twentythirteen' ) ); ?></div>
+        <hr/>
+        <nav class="comment-navigation w3-section w3-center" role="navigation">
+            <?php previous_comments_link( '<div class="w3-btn w3-padding-large w3-white w3-border w3-tooltip"><b>« <span class="w3-text">Older Comments</span></b></div>' ); ?>
+            <?php next_comments_link( '<div class="w3-btn w3-padding-large w3-white w3-border w3-tooltip"><b><span class="w3-text">Newer Comments</span> »</b></div>' ); ?>
         </nav><!-- .comment-navigation -->
         <?php endif; // Check for comment navigation ?>
  
