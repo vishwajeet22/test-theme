@@ -40,38 +40,22 @@ function mytheme_comment($comment, $args, $depth) {
     if ( 'div' === $args['style'] ) {
         $tag       = 'div';
         $add_below = 'comment';
-    } else {
-        $tag       = 'li';
-        $add_below = 'div-comment';
     }?>
-    <<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? 'w3-row w3-panel' : 'parent w3-row w3-panel' ); ?> id="comment-<?php comment_ID() ?>"><?php 
-    if ( 'div' != $args['style'] ) { ?>
-        <div id="div-comment-<?php comment_ID() ?>" class="comment-body w3-container w3-row"><?php
-    } ?>
+    <<?php echo $tag; ?> <?php comment_class(''); ?> id="comment-<?php comment_ID() ?>">
 
-		<div class="w3-col w3-container l3 m3 w3-hide-small w3-padding">
+		<div class="w3-col w3-panel s3 m3 l3" id="comment-avatar-<?php comment_ID() ?>">
 			<div class="comment-author vcard"><?php 
-				if ( $args['avatar_size'] != 0 ) {
-					if ($comment->comment_parent == '0')
-						echo get_avatar( $comment, $args['avatar_size'],'', '', array('class' => 'w3-left w3-circle w3-margin-right')); 
-					else
-						echo get_avatar( $comment, 48,'', '', array('class' => 'w3-margin-left w3-left w3-circle w3-margin-right')); 	
-				} ?>
-			</div>
-		</div>
-
-		<div class="w3-col w3-container w3-hide-medium w3-hide-large s3 w3-padding">
-			<div class="comment-author vcard"><?php 
-				if ( $args['avatar_size'] != 0 ) {
-					if ($comment->comment_parent == '0')
+				/*if ( $args['avatar_size'] != 0 ) {
+					/if ($comment->comment_parent == '0')
 						echo get_avatar( $comment, 48,'', '', array('class' => 'w3-left w3-circle w3-margin-right')); 
 					else
 						echo get_avatar( $comment, 24,'', '', array('class' => 'w3-margin-left w3-left w3-circle w3-margin-right')); 	
-				} ?>
+				}*/ ?>
+				<img src="<?php echo get_template_directory_uri(); ?>/res/gravtar.jpg" alt="default_gravtar" class="w3-right w3-circle w3-margin-right" style="width:25%">
 			</div>
 		</div>
 
-		<div class="w3-col l9 m9 s9 w3-container w3-justify">
+		<div class="w3-col l9 m9 s9 w3-panel w3-justify" id="comment-content-<?php comment_ID() ?>">
 			<div class="comment-meta commentmetadata">
 				<?php printf( __( '<cite class="fn w3-text-theme">%s</cite>' ), get_comment_author() ); ?>
 				<br/>

@@ -62,8 +62,8 @@ $comments_args = array(
     <?php if ( have_comments() ) : ?>
     <div class="w3-col l6 m12 s12">
         <div class="w3-container w3-margin-top">
-            <div class="commentlist">
-                <?php wp_list_comments( 'type=comment&callback=mytheme_comment&style=div&avatar_size=96' ); ?>
+            <div class="commentlist w3-row">
+                <?php wp_list_comments( 'type=comment&callback=mytheme_comment&style=div' ); ?>
             </div>
             <!-- .comment-list -->
         </div>
