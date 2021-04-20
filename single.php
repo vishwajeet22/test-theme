@@ -39,14 +39,7 @@
     <div class="w3-container w3-justify w3-col l9 m12 s12 w3-large"><?php the_content(); ?></div>
 
     <div class="w3-container w3-col l2 m12 s12">
-
-      <div class="w3-card w3-margin w3-margin-top">
-          <img src="<?php the_post_thumbnail_url(); ?>" style="width:100%">
-          <div class="w3-container w3-white">
-              <h4><b>My Name</b></h4>
-              <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
-          </div>
-      </div>
+      <?php get_template_part('partials/post-announcement') ?>
     </div>
     <!-- End of row -->
     </div>

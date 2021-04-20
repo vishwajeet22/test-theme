@@ -85,7 +85,10 @@ $comments_args = array(
         <?php endif; ?>
     
     </div>
-
+    <?php else: // no comments ?>
+        <div class="w3-col l6 m12 s12">
+            <div class="w3-container w3-margin-top w3-xlarge w3-center">There aren't any comments to display &#128512;</div>
+        </div>
     <?php endif; // have_comments() ?>
 
     <div class="w3-col s12 m12 l6">
