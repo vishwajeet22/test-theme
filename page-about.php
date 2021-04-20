@@ -5,7 +5,7 @@
   <div class="w3-col l8 s12">
     
     <div class="w3-card-4 w3-margin w3-white">
-      <img src="<?php echo get_template_directory_uri(); ?>/res/404.jpg" alt="Not Found" loading="lazy" style="width:100%;">
+      <img src="<?php echo get_template_directory_uri(); ?>/res/about.jpg" alt="About image not found" loading="lazy" style="width:100%;">
 
       <div class="w3-container">
         <div class="w3-justify w3-padding">
